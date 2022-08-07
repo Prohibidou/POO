@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class loteria {
 
 	public static void main(String[] args) {
-
+int continua;
+do {
 Operaciones Op1 = new Operaciones();     
 ArrayList<Integer> listaElegida = new ArrayList<Integer>();
 
@@ -27,8 +28,8 @@ for(int numeros : listaGanadora) {
 	
 System.out.println("los numeros que acerto son: "+ Op1.comparo(listaElegida , listaGanadora));
 
-int eleccionContinuar = Op1.continuar();
-
+ continua = Op1.continuar();
+} while (continua ==1 );
 	}
 	
 }
