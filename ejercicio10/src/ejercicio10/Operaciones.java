@@ -23,16 +23,23 @@ public void Generador() {
 		num1=ran.nextFloat();
 	}
 }
+
     public void LeoYConsisto () {
 	Scanner in = new Scanner(System.in);
-	do {
-		System.out.println("introduzcalo");
-	int decision = in.nextInt();
-	}while ( (decision<1) || (decision>2));
+	while (((decision<1) || (decision>2))) {	
+	System.out.println("introduzcalo porque debe ser un 1 o un 2.");
+    if (in.hasNextInt()) {    
+	decision = in.nextInt();
+    } else {
+    System.out.println("su token no es un entero. ingrese otro");
+     in.next();
+    
+    }
+    }
 	this.decision=decision;
-     
     }
 
+    
 public int getDecision() {
 	return decision;
 }
