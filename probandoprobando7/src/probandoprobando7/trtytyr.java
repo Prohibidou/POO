@@ -5,8 +5,9 @@ private String na;
 
 public trtytyr() {
 	super();
-	// TODO Auto-generated constructor stub
 }
-
+ public String logico (String s) {
+	 return s;
+ }
 
 }
