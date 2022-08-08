@@ -39,9 +39,9 @@ public class Main {
 		profesores.get(i).getApellido());
 		//mostré el nombre y apellido del profesor almacenado en el array profesores.
 		System.out.println("Materias: ");
-		for (int j=0;j<profesores.get(j).getMaterias().size();j++) {
+		for (int j=0;j<profesores.get(i).getMaterias().size();j++) {
 			
-		System.out.println(profesores.get(j).getMaterias().get(j).getNombre());
+		System.out.println(profesores.get(i).getMaterias().get(j).getNombre());
 		}
 		}
 		}
