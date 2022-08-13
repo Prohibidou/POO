@@ -27,8 +27,6 @@ public class Main {
 		
 		Profesor profesor3 = new Profesor("Laura", "Perez");
 		profesor3.setMaterias(new ArrayList<Materia>()); 
-		profesor3.añadirMateria(poo);
-		profesor3.añadirMateria(algebra);
 		profesores.add(profesor3);
 		//tengo una lista de profesores (clases de Profesor), pero dentro de cada clase de Profesor, no he inicializado su array (no inicialice los atributos de lista de materias)
 		
