@@ -8,7 +8,6 @@ public class mainPersona {
          LocalDate NacJuan = LocalDate.of(1999, 03, 16)   ;   
          LocalDate NacRomina = LocalDate.of(2001, 03, 14)   ;    
          LocalDate NacMaxi = LocalDate.of(1980, 03, 21)   ;    
-
          //instanciar tres veces una clase es crear 3 objetos.
 		Persona juan = new Persona("juan","vera",NacJuan);
 		Persona romina = new Persona("romina","salazar",NacRomina);
