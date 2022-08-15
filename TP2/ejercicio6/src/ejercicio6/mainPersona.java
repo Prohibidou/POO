@@ -16,6 +16,7 @@ public class mainPersona {
 	System.out.println(juan.toString());
 		System.out.println(romina.toString());
 	System.out.println(maxi.toString());
+	
 	}
 
 }
