@@ -5,6 +5,7 @@ private static String caracteres =
 "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 private String contraseña;
 
+
 public String getContraseña() {
 return contraseña;
 }
