@@ -11,7 +11,7 @@ public void setPersonas (ArrayList<Persona> personas) {
 this.personas = personas;	
 }
 //añado personas a la lista Familia.
-public void añadoLista(Persona pers){
+public void añadoPersona(Persona pers){
       this.personas.add(pers);
 }
 
@@ -20,23 +20,6 @@ public ArrayList<Persona> getPersonas() {
 	return personas;
 }
 
-//public String toString() {
-//	String edad,estudia,trabaja,resultado;
-//	for (Persona per :integrantesFamilia) {
-//		 edad= Integer.toString(per.getEdad());
-//		 estudia= Integer.toString(per.getTrabaja());
-//		 trabaja= Integer.toString(per.getEstudia());
-//		return "su edad:"+edad+"su sexo"+per.getSexo()+"estudia?"+estudia+"trabaja"+trabaja ;		
-//	}
-//}
-
-//public void muestro(ArrayList<Persona> personas2) {
-//	for (int i=0; 1<personas2.size();i++) {
-//	Persona	per = personas2.get(i);
-//	System.out.println("su edad:"+per.getEdad()+"su sexo"+per.getSexo()+"estudia?"+per.getEstudia()+"trabaja"+per.getTrabaja());		
-//
-//	}
-//}
 
 	
 }

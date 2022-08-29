@@ -18,6 +18,20 @@ public Persona(String sexo, Integer edad, String estudia, String trabaja) {
 	this.estudia = estudia;
 	this.trabaja = trabaja;
 }
+
+public void permitido () {
+	if (this.edad>=18) {
+	   System.out.println("tiene permitido trabajar");
+		System.out.println("tiene permitido manejar");
+	}else if(this.edad>=16){
+		System.out.println("no tiene permitido trabajar");
+	    System.out.println("tiene permitido manejar de forma condicional");
+	}else {
+		System.out.println("no tiene permitido ni trabajar ni manejar");
+	}
+	
+	
+}
 public String getSexo() {
 	return sexo;
 }
