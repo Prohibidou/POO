@@ -1,5 +1,3 @@
-package ej6;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -10,9 +8,8 @@ public class Main {
 		for (int i = 0; i < 10; i++) {
 			if (rnd.nextBoolean()) {
 				personas.add(new Docente("NomDoc" + i, "ApeDoc" + i, "Mat" + i));
-			} else {                
-				Alumno alumno = new Alumno("AlumNom" + i, "AlumApe" + i);//instancio una clase alumno, que esta hereda del padre, porque es una clase que extiende a Persona aunque no instanciemos Persona alumno = new Alumno()
-				//Gracias a instanciar un hijo, puedo usar los metodos del hijo y del padre a la vez.
+			} else {
+				Alumno alumno = new Alumno("AlumNom" + i, "AlumApe" + i);
 				for (int j = 0; j < 10; j++) {
 					alumno.agregarMateria("Mat" + j);
 					if (rnd.nextBoolean()) {
@@ -22,8 +19,16 @@ public class Main {
 				personas.add(alumno);
 			}
 		}
+		
+	String	mensajeElegido="la materia de la persona es:";
+	Integer cont=0;
 		for (Persona persona : personas) {
-			System.out.println(persona.materia());
+		 if (cont<personas.size()/2) {
+		//	System.out.println(persona.materia(mensajeElegido));
+		 } else {
+			 System.out.println(persona.materia());
+		 }
+		 cont++;
 		}
 	}
 }

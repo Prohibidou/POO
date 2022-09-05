@@ -1,0 +1,50 @@
+package ej10.copia2;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Main {
+	public static void main(String[] args) {
+		Random rnd = new Random();
+		
+		Docente docente1= new Docente("nombre5", 2.4, rnd.nextInt(1, 4));
+		Docente docente2= new Docente("nombre5", 2.4, rnd.nextInt(1, 4));
+		Docente docente3= new Docente("nombre5", 2.4, rnd.nextInt(1, 4));
+		Docente docente4= new Docente("nombre5", 2.4, rnd.nextInt(1, 4));
+		Docente docente5= new Docente("nombre5", 2.4, rnd.nextInt(1, 4));
+		
+		NoDocente nd1= new NoDocente("nombre6", 12.0, rnd.nextInt(1, 3));
+		NoDocente nd2= new NoDocente("nombre6", 12.0, rnd.nextInt(1, 3));
+		NoDocente nd3= new NoDocente("nombre6", 12.0, rnd.nextInt(1, 3));
+		NoDocente nd4= new NoDocente("nombre6", 12.0, rnd.nextInt(1, 3));
+		NoDocente nd5= new NoDocente("nombre6", 12.0, rnd.nextInt(1, 3));
+
+
+		Reloj reloj = new Reloj();		
+		reloj.AsignoHorasReloj(docente1);
+		reloj.AsignoHorasReloj(docente2);
+		reloj.AsignoHorasReloj(docente3);
+		reloj.AsignoHorasReloj(docente4);
+		reloj.AsignoHorasReloj(docente5);
+		reloj.AsignoHorasReloj(docente5);
+
+		reloj.AsignoHorasReloj(nd1);
+		reloj.AsignoHorasReloj(nd2);
+		reloj.AsignoHorasReloj(nd3);
+		reloj.AsignoHorasReloj(nd4);
+		reloj.AsignoHorasReloj(nd5);
+
+
+            System.out.println(docente1.getCantHorasTrabMes());
+            System.out.println(docente2.getCantHorasTrabMes());
+            System.out.println(docente3.getCantHorasTrabMes());
+            System.out.println(docente4.getCantHorasTrabMes());
+            System.out.println(docente5.getCantHorasTrabMes());
+            System.out.println(nd1.getCantHorasTrabMes());
+            System.out.println(nd2.getCantHorasTrabMes());
+            System.out.println(nd3.getCantHorasTrabMes());
+
+		
+	}
+
+}

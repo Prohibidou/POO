@@ -1,4 +1,4 @@
-package ej6;
+
 
 import java.util.ArrayList;
 
@@ -25,18 +25,21 @@ public class Alumno extends Persona {
 	 * Tengo dos metodos con el mismo nombre en la misma clase, pero con distinta cantidad de parametros y tipo de retorno.
 	 * 
 	 */
-	public void materia(int b) {   
-		String msg = "El Alumno se encuentra cursando las siguientes materias \n";
-		for (String materia : materias) {
-		System.out.println(msg = msg + materia + "\n");
-		}
-	}
 
 	public String materia() {
 		String msg = "El Alumno se encuentra cursando las siguientes materias \n";
 		for (String materia : materias) {
 			msg = msg + materia + "\n";
 		}
-		return msg;
+		return msg; //cuando retorna MSG, entra al bucle a buscar su ultimo valor.
 	}
+	
+	public String materia(String mensaje) {
+		for (String materia : materias) {
+			mensaje = mensaje + materia + "\n";
+		}
+		return mensaje ;
+		}
+	
+	
 }

@@ -1,5 +1,8 @@
 package ej6;
 
+
+
+
 public abstract class Persona {
 	private String nombre,apellido; 
 	public Persona(String nombre, String apellido) { 
@@ -19,4 +22,5 @@ public void setApellido(String apellido) {
 		this.apellido = apellido;
 		}
 	public abstract String materia();
-	}
+     }
+
