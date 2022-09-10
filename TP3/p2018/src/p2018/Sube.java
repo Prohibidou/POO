@@ -6,8 +6,7 @@ public class Sube {
 private Double saldoAct;
 private String duenio;
 private String contrasenia;
-private ArrayList<Viaje> viajes= new ArrayList<Viaje>(); //viajes que la sube realiza en el mes.
-
+private ArrayList<Viaje> viajes;
 
 
 public Sube(Double saldoAct, String duenio, String contrasenia, ArrayList<Viaje> viajes) {
@@ -23,7 +22,6 @@ public Sube(Double saldoAct, String duenio, String contrasenia, ArrayList<Viaje>
 //se ingresa el saldo a acreditar al saldo actual
 public void acreditarSalgo(Double saldo) {
 this.saldoAct=this.saldoAct+saldo;
-
 }
 
 
@@ -32,42 +30,30 @@ public Double consultarSaldo() {
 	 return this.saldoAct ;
 }
 
-public boolean pagarViaje (Viaje viaje) {
+
+ public boolean pagarViaje (Viaje viaje) {
+	viaje.setDescuento(this.viajes); //viajes que la sube tiene hasta el momento, con el cual calculamos el descuento para este viaje
+	
 	Double desc= viaje.getDescuento(); //descuento para los pasajes comprados de acuerdo a la cantidad de viajes realizados en el mes
+//	System.out.println("el descuento en este viaje fue:"+viaje.getDescuento());
 	Double precioViaje = viaje.calcPrecio();
-	Double precioFinal= precioViaje-precioViaje*desc;
-if( this.saldoAct>=0 ) {
-
-	if(this.saldoAct +30 < precioFinal) {
+    Double precioFinal = precioViaje-(precioViaje* desc);
+	if( (this.saldoAct+30 ) < precioFinal) {
+		System.out.println("pago no realizado");
 		return false;
-	} else if (this.saldoAct+30>=precioFinal) {
-	       this.setSaldoAct(this.saldoAct-precioFinal);
-		   return true;
-		   
-	}
-}else {
-	Double saldoAbs = Math.abs(this.getSaldoAct()) ;
-	
-	if(saldoAbs < precioFinal) {
-		return false;
-	} else if (saldoAbs>=precioFinal) {
-	       this.setSaldoAct(this.saldoAct-precioFinal);
-		   return true;
-		   
-	}
-	
+	} else // tengo que this.saldoAct+30>=precioFinal; 
+		System.out.println("añadido");
+	       this.setSaldoAct(this.saldoAct-(precioFinal));
+		   this.viajes.add(viaje);
+	       return true;		   
+   }
+
+
+
+public void informeMensual() {
+    for (int i=0; i<this.viajes.size() ; i++) {
+    System.out.println("en el viaje"+i+"hay de descuento:"+ viajes.get(i).getDescuento() ) ;    //Estoy modificando el atributo del padre, cada vez que hago setDescuento, y cada hijo accede a ese atributo actualizado con el getDescuento.Porque cada hijo tiene el mismo padre por ende cada elemento del array, cada viaje en colectivo, accede al mismo atributo del padre; al mismo atributo y valor   		   
 }
-	
-	return false;
-
-
-
-}
-
-public String informeMensual() {
-	
-return ("la cantidad de viajes realizados por"+this.duenio+"es:"+this.viajes.size());		
-	
 }
 
 public Double getSaldoAct() {
