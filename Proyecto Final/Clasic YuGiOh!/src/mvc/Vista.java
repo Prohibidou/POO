@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.BorderLayout;
 public class Vista {
 
 private JFrame frame;
@@ -15,26 +16,34 @@ private JPanel panelInferior;
 private JButton botonGenerar;
 //private ImageIcon Card;
 private JLabel carta;
-private JPanel panel1_1;
 private JPanel panel1;
-private JPanel panel1_2;
-
+private JPanel panel2;
+private JPanel panel3;
+private JLabel fondo_panel;
 private JLabel carta_1;
 private JLabel carta_2;
 private JLabel carta_3;
 private JPanel panel_Tablero;
 private JLabel carta_4;
-private JLabel fondo;
 
 ArrayList<JPanel> cartas_tablero = new ArrayList<JPanel>();
+private JLabel lblNewLabel;
+private JPanel panel_1;
+private JPanel panel_2;
+private JPanel panel_3;
+private JLabel fondo;
 
 
 public Vista() {	
 this.frame=new JFrame("TABLERO");
 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-frame.getContentPane().setLayout(null);
 this.frame.setSize(2000,2000);
+
+
+
 this.generarPanelSuperior();
+
+
 
 
 //this.generarPanelInferior();
@@ -79,65 +88,215 @@ Image dimg3 = img3.getScaledInstance(150, 150,
     Image.SCALE_SMOOTH);
 ImageIcon imageIco3 = new ImageIcon(dimg3);
 
-// Panel tablero
-panel_Tablero = new JPanel();
-panel_Tablero.setBackground(Color.RED);
-panel_Tablero.setForeground(Color.RED);
-//panel_Tablero.setBackground(Color.RED);
-panel_Tablero.setBounds(0, 0, 1027, 463);
-frame.getContentPane().add(panel_Tablero);
-panel_Tablero.setLayout(null);
 
-
-
-//Fondo del tablero
+//Creo la imagen del fondo del tablero, la plantilla.
 BufferedImage img4 = null;
 try {
-img4 = ImageIO.read(new File("fondo_tablero.jpg"));
+img4 = ImageIO.read(new File("yugi_milennium.jpg"));
 } catch (IOException e) {
 e.printStackTrace(); //si no encuentra el archivo, lo dirà
 }
-Image dimg4 = img4.getScaledInstance(2000, 2000, Image.SCALE_SMOOTH);
+Image dimg4 = img4.getScaledInstance(1500, 1500,
+Image.SCALE_SMOOTH);
 ImageIcon imageIco4 = new ImageIcon(dimg4);
-fondo= new JLabel(imageIco4);
-
-//frame.add(fondo);
-panel_Tablero.add(fondo);
 
 
+//cartas de mano del bot
 
-//preparo el panel 1_1
-carta_1= new JLabel(imageIcon);
-panel1_1 = new JPanel();
-panel1_1.setBounds(552, 158, 122, 132);
-//panel_Tablero.add(panel1_1);
-panel1_1.setBackground(Color.RED);
-panel1_1.add(carta_1);
-cartas_tablero.add(panel1_1);
-//carta_2.setVisible(false);
-
-//preparo el panel1
-panel1 = new JPanel();
-panel1.setBounds(387, 158, 122, 132);
-//panel_Tablero.add(panel1);
-panel1.setBackground(Color.BLACK);
-carta_2= new JLabel(imageIco2);
-panel1.add(carta_2);
-
-//Array TABLERO ( array de paneles de cartas)
-cartas_tablero.add(panel1);
+JPanel carta1_bot = new JPanel();
+carta1_bot.setBackground(Color.BLACK);
+carta1_bot.setBounds(226, 121, 74, 96);
+frame.getContentPane().add(carta1_bot);
 
 
+JPanel carta2_bot = new JPanel();
+carta2_bot.setBackground(Color.BLACK);
+carta2_bot.setBounds(380, 121, 74, 96);
+frame.getContentPane().add(carta2_bot);
 
-//preparo el panel1_2
-panel1_2 = new JPanel();
-panel1_2.setBounds(720, 158, 122, 132);
-//panel_Tablero.add(panel1_2);
-panel1_2.setBackground(Color.BLACK);
-carta_3= new JLabel(imageIco3);
-panel1_2.add(carta_3); 
-cartas_tablero.add(panel1_2);
 
+JPanel carta3_bot = new JPanel();
+carta3_bot.setBackground(Color.BLACK);
+carta3_bot.setBounds(535, 121, 74, 96);
+frame.getContentPane().add(carta3_bot);
+
+
+JPanel carta4_bot = new JPanel();
+carta4_bot.setBackground(Color.BLACK);
+carta4_bot.setBounds(226, 249, 74, 96);
+frame.getContentPane().add(carta4_bot);
+
+JPanel carta5_bot = new JPanel();
+carta5_bot.setBackground(Color.BLACK);
+carta5_bot.setBounds(380, 249, 74, 96);
+frame.getContentPane().add(carta5_bot);
+
+
+//deck del bot
+JPanel deck_bot = new JPanel();
+deck_bot.setForeground(new Color(204, 0, 0));
+deck_bot.setBackground(new Color(204, 153, 0));
+deck_bot.setBounds(10, 164, 74, 96);
+frame.getContentPane().add(deck_bot);
+
+//deck del bot
+JPanel cem_bot = new JPanel();
+cem_bot.setBackground(new Color(255, 215, 0));
+cem_bot.setBounds(10, 10, 74, 96);
+frame.getContentPane().add(cem_bot);
+
+
+//campo de batalla del bot
+JPanel carta1Campo_bot = new JPanel();
+carta1Campo_bot.setBackground(Color.BLACK);
+carta1Campo_bot.setBounds(138, 10, 74, 96);
+frame.getContentPane().add(carta1Campo_bot);
+
+
+JPanel carta2Campo_bot = new JPanel();
+carta2Campo_bot.setBackground(Color.BLACK);
+carta2Campo_bot.setBounds(294, 10, 74, 96);
+frame.getContentPane().add(carta2Campo_bot);
+
+
+JPanel carta3Campo_bot = new JPanel();
+carta3Campo_bot.setBackground(Color.BLACK);
+carta3Campo_bot.setBounds(453, 10, 74, 96);
+frame.getContentPane().add(carta3Campo_bot);
+
+
+JPanel carta4Campo_bot = new JPanel();
+carta4Campo_bot.setBackground(Color.BLACK);
+carta4Campo_bot.setBounds(605, 10, 74, 96);
+frame.getContentPane().add(carta4Campo_bot);
+
+JPanel carta5Campo_bot = new JPanel();
+carta5Campo_bot.setBackground(Color.BLACK);
+carta5Campo_bot.setBounds(535, 249, 74, 96);
+frame.getContentPane().add(carta5Campo_bot);
+
+JPanel carta6Campo_bot = new JPanel();
+carta6Campo_bot.setBackground(Color.BLACK);
+carta6Campo_bot.setBounds(749, 10, 74, 96);
+frame.getContentPane().add(carta6Campo_bot);
+
+
+//Cartas de mano del jugador
+JPanel carta1_jug = new JPanel();
+carta1_jug.setBackground(Color.BLACK);
+carta1_jug.setBounds(10, 593, 74, 96);
+frame.getContentPane().add(carta1_jug);
+
+JPanel carta2_jug = new JPanel();
+carta2_jug.setBackground(Color.BLACK);
+carta2_jug.setBounds(138, 593, 74, 96);
+frame.getContentPane().add(carta2_jug);
+
+
+JPanel carta3_jug = new JPanel();
+carta3_jug.setBackground(Color.BLACK);
+carta3_jug.setBounds(310, 593, 74, 96);
+frame.getContentPane().add(carta3_jug);
+
+
+JPanel carta4_jug = new JPanel();
+carta4_jug.setBackground(Color.BLACK);
+carta4_jug.setBounds(453, 593, 74, 96);
+frame.getContentPane().add(carta4_jug);
+
+
+JPanel carta5_jug = new JPanel();
+carta5_jug.setBackground(Color.BLACK);
+carta5_jug.setBounds(605, 593, 74, 96);
+frame.getContentPane().add(carta5_jug);
+
+//deck del jugador
+JPanel deck_jug = new JPanel();
+deck_jug.setForeground(new Color(153, 0, 0));
+deck_jug.setBackground(new Color(204, 153, 0));
+deck_jug.setBounds(749, 414, 74, 96);
+frame.getContentPane().add(deck_jug);
+
+//cementerio del jugador
+JPanel cem_jug = new JPanel();
+cem_jug.setForeground(new Color(0, 0, 0));
+cem_jug.setBackground(new Color(255, 215, 0));
+cem_jug.setBounds(749, 593, 74, 96);
+frame.getContentPane().add(cem_jug);
+
+
+//campo de batalla del jugador
+JPanel carta1Campo_jug = new JPanel();
+carta1Campo_jug.setBackground(Color.BLACK);
+carta1Campo_jug.setBounds(226, 385, 74, 96);
+frame.getContentPane().add(carta1Campo_jug);
+
+JPanel carta2Campo_jug = new JPanel();
+carta2Campo_jug.setBackground(Color.BLACK);
+carta2Campo_jug.setBounds(380, 385, 74, 96);
+frame.getContentPane().add(carta2Campo_jug);
+
+
+JPanel carta3Campo_jug = new JPanel();
+carta3Campo_jug.setBackground(Color.BLACK);
+carta3Campo_jug.setBounds(535, 385, 74, 96);
+frame.getContentPane().add(carta3Campo_jug);
+
+
+JPanel carta4Campo_jug = new JPanel();
+carta4Campo_jug.setBackground(Color.BLACK);
+carta4Campo_jug.setBounds(226, 492, 74, 96);
+frame.getContentPane().add(carta4Campo_jug);
+
+
+JPanel carta5Campo_jug = new JPanel();
+carta5Campo_jug.setBackground(Color.BLACK);
+carta5Campo_jug.setBounds(380, 492, 74, 96);
+frame.getContentPane().add(carta5Campo_jug);
+
+JPanel carta6Campo_jug = new JPanel();
+carta6Campo_jug.setBackground(Color.BLACK);
+carta6Campo_jug.setBounds(535, 492, 74, 96);
+frame.getContentPane().add(carta6Campo_jug);
+
+
+
+//Descripcion completa de la carta seleccionada
+
+JPanel cartaSeleccionada = new JPanel();
+cartaSeleccionada.setBackground(Color.BLACK);
+frame.getContentPane().add(cartaSeleccionada);
+cartaSeleccionada.setBounds(935, 414, 289, 132);
+
+JPanel descCartaSeleccionada = new JPanel();
+descCartaSeleccionada.setBackground(Color.BLACK);
+frame.getContentPane().add(descCartaSeleccionada);
+descCartaSeleccionada.setBounds(935, 95, 289, 311);
+
+//Contador vida jugador
+JLabel contadorJug = new JLabel("8000");
+contadorJug.setIcon(null);
+contadorJug.setBackground(new Color(153, 0, 153));
+contadorJug.setBounds(1041, 593, 200, 57);
+frame.getContentPane().add(contadorJug);
+
+//contador vida bot
+JLabel contadorBot = new JLabel("8000");
+contadorBot.setBackground(new Color(153, 0, 153));
+contadorBot.setBounds(1041, 28, 200, 57);
+frame.getContentPane().add(contadorBot);
+
+
+//icono del bot
+
+
+//icono del jugador
+
+//seteo el fondo de pantalla del tablero, la plantilla ( skin)
+frame.getContentPane().setLayout(null);
+fondo = new JLabel(imageIco4); 
+fondo.setBounds(0, 0, 1283, 700);
+frame.getContentPane().add(fondo);
 
 
 
