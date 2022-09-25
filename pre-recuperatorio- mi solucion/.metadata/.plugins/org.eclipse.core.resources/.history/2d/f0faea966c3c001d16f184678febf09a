@@ -1,0 +1,17 @@
+import java.util.ArrayList;
+
+public class Serie {
+
+private ArrayList<Temporada> temporadas;
+private String titulo;
+
+
+ 
+@Override
+public String toString() {
+	return "Serie [titulo=" + titulo + "]";
+}
+	
+	
+	
+}

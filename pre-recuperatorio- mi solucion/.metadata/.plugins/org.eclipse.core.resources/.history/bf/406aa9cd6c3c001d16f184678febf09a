@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+
+public class Temporada {
+	private Integer numeroTemp;
+	private ArrayList<Episodio> episodios;
+
+	public Temporada(Integer numeroTemp, ArrayList<Episodio> episodios) {
+
+	}
+
+	@Override
+	public String toString() {
+		return "Temporada [numeroTemp=" + numeroTemp + "]";
+	}
+
+}

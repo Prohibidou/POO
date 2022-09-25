@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\veram\Documents\Clases Universidad\POO\ejercicios Recuperatorio\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+170615757.index
+3206145387.index

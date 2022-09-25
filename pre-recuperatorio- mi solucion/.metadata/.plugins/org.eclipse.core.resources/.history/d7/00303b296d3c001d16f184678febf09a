@@ -1,0 +1,16 @@
+
+public class Episodio extends Obra {
+
+	private String fechaEmision;
+
+	
+
+
+
+
+	@Override public String toString() {
+		return "Episodio   " + super.getTitulo() + "  duracion :  " + super.getDuracion() + "   calificacion   "
+				+ super.getCalif() + "+[fechaEmision=" + fechaEmision + "]";
+	}
+
+}

@@ -1,0 +1,44 @@
+public abstract class Obra {
+private String titulo;
+private float duracion;
+private Integer calif; //integer aleatorio de 0 a 10 inclusive;
+
+
+
+public Obra(String titulo, float duracion, Integer calif) {
+	super();
+	this.titulo = titulo;
+	this.duracion = duracion;
+	this.calif = calif;
+}
+
+
+
+
+
+@Override
+public abstract String toString();
+
+
+
+
+
+public Integer getCalif() {
+	return calif;
+}
+
+
+
+public void setCalif(Integer calif) {
+	this.calif = calif;
+}
+
+
+
+
+
+
+
+
+	
+}

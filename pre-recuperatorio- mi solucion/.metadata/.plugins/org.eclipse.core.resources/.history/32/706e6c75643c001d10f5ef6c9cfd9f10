@@ -1,0 +1,7 @@
+
+public class Pelicula {
+private Double recaudacion;
+private String pais;
+	
+	
+}

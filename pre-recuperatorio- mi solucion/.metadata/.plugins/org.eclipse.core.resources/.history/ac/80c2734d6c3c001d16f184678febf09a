@@ -1,0 +1,14 @@
+
+public class Pelicula extends Obra {
+	private Double recaudacion;
+	private String pais;
+
+	
+@Override
+public String toString() {
+		return "Pelicula   " + super.getTitulo() + "  duracion :  " + super.getDuracion() + "   calificacion   "
+				+ super.getCalif() + "  recaudacion  "+ this.recaudacion+ " pais:  "+ this.pais;
+
+	}
+
+}

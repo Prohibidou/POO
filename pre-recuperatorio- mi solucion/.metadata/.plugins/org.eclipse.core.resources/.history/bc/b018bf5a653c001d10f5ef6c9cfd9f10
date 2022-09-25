@@ -1,0 +1,7 @@
+
+public class Episodio extends Obra {
+
+private String fechaEmision;
+	
+	
+}
