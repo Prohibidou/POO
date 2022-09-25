@@ -10,7 +10,6 @@ public class Main {
 		ArrayList<Temporada> temporadas = new ArrayList<Temporada>();
 
 		Random rnd = new Random();
-		int cont = 0;
 		for (Integer i = 0; i < 2; i++) {
 			ArrayList<Episodio> episodios = new ArrayList<Episodio>(); // en cada iteracion creo un nuevo objeto al que
 																		// agregarle episodios
@@ -41,44 +40,37 @@ public class Main {
 
 		ArrayList<Pelicula> peliculas = new ArrayList<Pelicula>();
 
-		for (Integer i = 0; i < rnd.nextDouble(3, 7); i++) {
-			peliculas.add(new Pelicula("titulo" + i, rnd.nextFloat(0, 260), rnd.nextInt(0, 11), rnd.nextDouble(0, 1000000),
-					"pais" + i));
+		for (Integer i = 0; i < rnd.nextDouble(3, 6); i++) {
+			peliculas.add(new Pelicula("titulo" + i, rnd.nextFloat(0, 260), rnd.nextInt(0, 11),
+					rnd.nextDouble(0, 1000000), "pais" + i));
 		}
 
-		
-		
-		System.out.println("\n \n" + "sin ordenar:");
+//		//otra manera de ordenar arrays, donde primero ordeno por califiacion y a igualdad de ella, ordeno por duracion
+//		Comparator<Pelicula> porCalificacion = Comparator.comparing(Pelicula::getCalif);
+//		Comparator<Pelicula> porDuracion = Comparator.comparing(Pelicula::getDuracion);
+//		peliculas.sort(porCalificacion.thenComparing(porDuracion));
+//		
 
-		for (Integer i = 0; i < peliculas.size(); i++) {
-			System.out.println(peliculas.get(i).toString());
-			
-		}
-
-		System.out.println("\n \n ORDENADO:");
-
+		System.out.println("\n \n peliculas ordenadas por calificacion, descendentemente: ");
 		Collections.sort(peliculas, (p1, p2) -> p1.getCalif().compareTo(p2.getCalif()));
-		
-		
+		Collections.reverse(peliculas); 
+
 		for (Integer i = 0; i < peliculas.size(); i++) {
 			System.out.println(peliculas.get(i).toString());
 		}
 
-		
 		ArrayList<Obra> obras = new ArrayList<Obra>();
-		
+
 		obras.addAll(peliculas);
 		obras.addAll(serie.getTemporadas().get(0).getEpisodios());
 		obras.addAll(serie.getTemporadas().get(1).getEpisodios());
-	
-		
-		Collections.sort(obras, (o1, o2) -> o1.getDuracion().compareTo(o2.getDuracion() ));
-      
-		
+
+		Collections.sort(obras, (o1, o2) -> o1.getDuracion().compareTo(o2.getDuracion()));
+        Collections.reverse(obras); //CUIDADO! si no llamas a este metodo, vas a mostrar de 0 a 5 los 5 mas chicos en duracion.Al hacer reverse, en las primeras 5 tenes a los que tienen mayor duracion  ( y no a lo ultimo del array)
 		System.out.println("\n obras ordenadas por mayor duracion");
-		 for (Integer i=0; i<5  ; i++) {
-			 System.out.println(obras.get(i).toString());
-		 }
+		for (Integer i = 0; i < 5; i++) {
+			System.out.println(obras.get(i).toString());
+		}
 	}
 
 }

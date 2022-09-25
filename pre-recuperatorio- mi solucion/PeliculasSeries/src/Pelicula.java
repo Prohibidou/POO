@@ -18,12 +18,21 @@ public Pelicula(String titulo, Float duracion, Integer calif, Double recaudacion
 
 
 
+
+
+
 @Override
 public String toString() {
-		return "Pelicula   " + super.getTitulo() + "  duracion en mins :  " + super.getDuracion() + "   calificacion   "
-				+ super.getCalif() + "  recaudacion  "+ this.recaudacion+ " pais:  "+ this.pais;
+	return "Pelicula"+super.toString()+"[recaudacion=" + recaudacion + ", pais=" + pais + "]";
+}
 
-	}
+
+
+
+
+
+
+
 
 
 public Double getRecaudacion() {

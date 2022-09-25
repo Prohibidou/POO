@@ -13,12 +13,17 @@ public class Episodio extends Obra {
 
 
 
-
-
-
-	@Override public String toString() {
-		return "Episodio   " + super.getTitulo() + "  duracion en mins :  " + super.getDuracion() + "   calificacion   "
-				+ super.getCalif() + "  [fechaEmision=" + fechaEmision + "]";
+//sobreescribo toString de clase padre (polimorf.dinamico) y a la vez, extiendo el metodo del padre.
+	@Override
+	public String toString() {
+		return "Episodio"+ super.toString()+"[fechaEmision=" + fechaEmision + "]";
 	}
+
+
+
+
+
+
+
 
 }

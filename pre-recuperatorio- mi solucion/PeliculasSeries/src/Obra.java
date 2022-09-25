@@ -16,8 +16,17 @@ public Obra(String titulo, Float duracion, Integer calif) {
 
 
 
+
+
+
 @Override
-public abstract String toString();
+public String toString() {
+	return "[titulo=" + titulo + ", duracion en mins=" + duracion + ", calif=" + calif + "]";
+}
+
+
+
+
 
 
 
