@@ -1,0 +1,34 @@
+package ej10;
+
+public class Docente extends Personal{
+private Integer categoria; //1:simple, 2:Semiexclusiva, 3:exclusiva
+
+	public Docente(String nombre_completo, Double antiguedad, Integer categoria) {
+	super(nombre_completo, antiguedad);
+	this.setCategoria(categoria);
+		
+	}
+
+	public Integer getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Integer categoria) {
+		this.categoria = categoria;
+	}
+	
+	public void cumple() {
+		if(this.getCategoria()==1) {
+			 if (this.getCantHorasTrabMes()>=10) {
+				 System.out.println("cumple");
+			 }else {
+				 System.out.println("no cumple");
+			 }
+		}else if (this.getCategoria()==2) {
+			
+		}
+	}
+
+	
+
+}

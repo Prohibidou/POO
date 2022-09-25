@@ -1,0 +1,23 @@
+package ejercicio3_parcial;
+
+public class Electrodomestico {
+protected String modelo;
+protected Double precio;
+private String marca;
+private String color;
+private Double capacidadTotal;
+
+public Electrodomestico(String modelo, Double precio, String marca, String color, Double capacidadTotal) {
+	super();
+	this.modelo = modelo;
+	this.precio = precio;
+	this.marca = marca;
+	this.color = color;
+	this.capacidadTotal = capacidadTotal;
+}
+	
+
+
+	
+	
+}

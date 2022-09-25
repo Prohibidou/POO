@@ -1,0 +1,8 @@
+package ejercicio3_parcial;
+
+public class Cocina extends Electrodomestico {
+private boolean electrica ;
+
+	
+	
+}

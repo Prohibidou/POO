@@ -1,0 +1,49 @@
+package ejercicio2_parcial;
+
+import java.util.ArrayList;
+
+public class Familia {
+private String apellidoF;
+private ArrayList<Persona> integrantes; //cantidad de integrantes aleatoria
+
+
+
+
+public Familia(String apellidoF, ArrayList<Persona> integrantes) {
+	super();
+	this.apellidoF = apellidoF;
+	this.integrantes = integrantes;
+}
+
+
+public Double promEdad(ArrayList<Persona> integrantes) {
+	Double promEd=0;
+	for (int i=0; i<integrantes.size();i++) { 
+	 promEd=promEd+integrantes.get(i).getEdad();
+	}
+return promEd;
+}
+
+
+public String getApellidoF() {
+	return apellidoF;
+}
+
+
+
+public void setApellidoF(String apellidoF) {
+	this.apellidoF = apellidoF;
+}
+
+
+
+public ArrayList<Persona> getIntegrantes() {
+	return integrantes;
+}
+public void setIntegrantes(ArrayList<Persona> integrantes) {
+	this.integrantes = integrantes;
+}
+	
+
+
+}

@@ -1,0 +1,25 @@
+package ejercicio3_parcial;
+
+import java.util.ArrayList;
+import java.util.Random;
+//indexOf devuelve -1 si esta ese elemento en el arreglo
+public class Main {
+
+	public static void main(String[] args) {
+    ArrayList<Electrodomestico> electrods = new ArrayList<Electrodomestico>();
+		Random rnd= new Random();
+		for (int i =0; i<30; i++ ) {
+			electrods.add(new Heladera("modelo"+i, rnd.nextDouble(0, 20000), marca, color,capacidadTotal  ,capacidadFreezer));
+//			electrods.add(new Lavarropa());
+//			electrods.add(new Cocina());
+
+		
+	}
+		
+	
+		
+		
+		
+	}
+
+}

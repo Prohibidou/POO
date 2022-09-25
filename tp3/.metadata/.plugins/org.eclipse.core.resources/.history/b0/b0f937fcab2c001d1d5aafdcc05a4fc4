@@ -1,0 +1,35 @@
+package ej10.copia2;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Main {
+	public static void main(String[] args) {
+		Random rnd = new Random();
+		
+		Docente docente1= new Docente("nombre5", 2.4, rnd.nextInt(1, 4));
+		Docente docente2= new Docente("nombre5", 2.4, rnd.nextInt(1, 4));
+		Docente docente3= new Docente("nombre5", 2.4, rnd.nextInt(1, 4));
+		Docente docente4= new Docente("nombre5", 2.4, rnd.nextInt(1, 4));
+		Docente docente5= new Docente("nombre5", 2.4, rnd.nextInt(1, 4));
+		
+		NoDocente nd1= new NoDocente("nombre6", 12.0, rnd.nextInt(1, 3));
+		NoDocente nd2= new NoDocente("nombre6", 12.0, rnd.nextInt(1, 3));
+		NoDocente nd3= new NoDocente("nombre6", 12.0, rnd.nextInt(1, 3));
+		NoDocente nd4= new NoDocente("nombre6", 12.0, rnd.nextInt(1, 3));
+		NoDocente nd5= new NoDocente("nombre6", 12.0, rnd.nextInt(1, 3));
+
+
+		Reloj reloj = new Reloj();		
+		reloj.AsignoHorasReloj(docente1);
+		reloj.AsignoHorasReloj(docente2);
+		reloj.AsignoHorasReloj(docente3);
+		reloj.AsignoHorasReloj(docente4);
+		reloj.AsignoHorasReloj(docente5);
+
+            
+		
+		
+	}
+
+}

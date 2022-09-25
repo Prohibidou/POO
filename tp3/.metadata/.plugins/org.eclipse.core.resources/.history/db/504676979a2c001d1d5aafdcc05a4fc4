@@ -1,0 +1,20 @@
+package ej10;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+    ArrayList<Personal> personal = new ArrayList<Personal>();
+    personal.add(new Docente("nombre", 5.0 ));
+    personal.add(new Docente("nombre", 4.0 ));
+    personal.add(new Docente("nombre", 1.0 ));
+    personal.add(new Docente("nombre", 15.0 ));
+    personal.add(new Docente("nombre", 14.0 ));
+    
+	
+	Reloj reloj=new Reloj();	
+		
+	}
+
+}

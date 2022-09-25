@@ -1,0 +1,91 @@
+package ej10;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Reloj {
+	private ArrayList<Personal> personal = new ArrayList<Personal>();
+
+	public Reloj() {
+
+	}
+
+	public void AsignoHorasReloj(ArrayList<Personal> personal) {
+		Random rnd = new Random();
+		for (Integer i = 0; i < personal.size(); i++) {
+			Integer numGen = rnd.nextInt(0, 100); // probabilidad dividida en 100 partes.
+			
+		   if (personal.get(i) instanceof Docente && (((Docente) personal.get(i)).getCategoria()==1) ) {
+				// docente categoria simple	
+				if (numGen <= 95) {
+					personal.get(i).setCantHorasTrabMes(rnd.nextDouble(10, 30));
+				} else {
+					personal.get(i).setCantHorasTrabMes(rnd.nextDouble(0, 11));
+				}
+		   }
+		   if (personal.get(i) instanceof Docente && (((Docente) personal.get(i)).getCategoria()==2) ) {
+		
+				// Docente categoria semiex
+				if (numGen <= 75) {
+					personal.get(i).setCantHorasTrabMes(rnd.nextDouble(20, 40));
+				} else {
+					personal.get(i).setCantHorasTrabMes(rnd.nextDouble(0, 21));
+				}
+		   }
+			
+		   if (personal.get(i) instanceof Docente && (((Docente) personal.get(i)).getCategoria()==3) ) {
+
+		   // docente categoria exclusiva
+				if (numGen <= 60) {
+ 					personal.get(i).setCantHorasTrabMes(rnd.nextDouble(0, 60));
+				} else {
+    				personal.get(i).setCantHorasTrabMes(rnd.nextDouble(0, 41));
+				}
+		   }
+		   
+		   if (personal.get(i) instanceof NoDocente && (((Docente) personal.get(i)).getCategoria()==1) ) {
+
+			   // docente categoria exclusiva
+					if (numGen <= 80) {
+	 					personal.get(i).setCantHorasTrabMes(rnd.nextDouble(30, 60));
+					} else {
+	    				personal.get(i).setCantHorasTrabMes(rnd.nextDouble(0, 30));
+					}
+			   }
+		   
+		   if (personal.get(i) instanceof NoDocente && (((Docente) personal.get(i)).getCategoria()==2) ) {
+
+			   // docente categoria exclusiva
+					if (numGen <= 80) {
+	 					personal.get(i).setCantHorasTrabMes(rnd.nextDouble(20, 60));
+					} else {
+	    				personal.get(i).setCantHorasTrabMes(rnd.nextDouble(0, 20));
+					}
+			   }
+		   
+		}
+	}
+
+	public void rand() {
+		Random rnd = new Random();
+		Integer numGen = rnd.nextInt(0, 100); // probabilidad dividida en 10 partes.
+
+		if (numGen < 1) {
+			System.out.println("10 porciento");
+		} else if (numGen < 5) { // 40%
+
+		} else {
+			// 50%ñ
+		}
+
+	}
+
+	public ArrayList<Personal> getPersonal() {
+		return personal;
+	}
+
+	public void setPersonal(ArrayList<Personal> personal) {
+		this.personal = personal;
+	}
+
+}

@@ -1,0 +1,44 @@
+package ej10;
+
+public class NoDocente extends Personal{
+private Integer jornada; //1:completa, 2:Reducida.
+
+	public NoDocente(String nombre_completo, Double antiguedad, Integer jornada) {
+	     super(nombre_completo, antiguedad);
+		 this.setJornada(jornada);
+	}
+
+	public Integer getJornada() {
+		return jornada;
+	}
+
+	public void setJornada(Integer jornada) {
+		this.jornada = jornada;
+	}
+
+	public void cumple() {
+		if (this.getJornada() == 1) {
+			if (this.getCantHorasTrabMes() >= 10) {
+				System.out.println("cumple");
+			} else {
+				System.out.println("no cumple");
+			}
+		} else if (this.getJornada() == 2) {
+			if (this.getCantHorasTrabMes() >= 20) {
+				System.out.println("cumple");
+			} else {
+				System.out.println("no cumple");
+			}
+		} else if (this.getCategoria() == 3) {
+			if (this.getCantHorasTrabMes() >= 40) {
+				System.out.println("cumple");
+
+			} else {
+				System.out.println("no cumple");
+			}
+		}
+	}	
+
+	
+
+}

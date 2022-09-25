@@ -1,0 +1,47 @@
+package ejercicio2_parcial;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ArrayList<String> nombres = new ArrayList<String>();
+		ArrayList<String> apellidos = new ArrayList<String>();
+		ArrayList<Familia> familias = new ArrayList<Familia>();
+		ArrayList<Persona> integrantesF = new ArrayList<Persona>();
+
+		for (Integer i = 0; i < 20; i++) {
+			nombres.add("nombre" + i);
+			apellidos.add("apellido" + i);
+		}
+
+		Random rnd = new Random();
+
+		for (Integer i = 0; i < rnd.nextInt(1, 10); i++) {
+			integrantesF.add(new Persona(nombres.get(rnd.nextInt(0, 20)), rnd.nextInt(0, 120)));
+		}
+
+//        for (Integer i=0; i<integrantesF.size(); i++){
+//        System.out.println(integrantesF.get(i).getNombre()+"    su edad es:"+integrantesF.get(i).getEdad());
+//        }
+
+		for (Integer i = 0; i < rnd.nextInt(1, 10); i++) {
+			ArrayList<Persona> arrayAuxPersona = new ArrayList<Persona>();
+
+			for (Integer j = 0; j < rnd.nextInt(1, 10); j++) {
+				arrayAuxPersona.add(new Persona(nombres.get(rnd.nextInt(0, 20)), rnd.nextInt(0, 120)));
+			}
+
+		}
+		familias.add(new Familia(apellidos.get(rnd.nextInt(0, 20)), arrayAuxPersona ));
+
+//		for (Integer i = 0; i < familias.size(); i++) {
+//			
+//		System.out.println("integrantes:");
+//          System.out.println(familias.get(1).getIntegrantes().get(1).getNombre()+familias.get(1).getIntegrantes().get(1).getEdad() );
+//		}
+
+	}
+
+}

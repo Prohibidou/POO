@@ -1,0 +1,23 @@
+package ej10;
+
+public class NoDocente extends Personal{
+private Integer jornada; //1:completa, 2:Reducida.
+
+	public NoDocente(String nombre_completo, float antiguedad) {
+	     super(nombre_completo, antiguedad);
+		 
+	}
+
+	public Integer getJornada() {
+		return jornada;
+	}
+
+	public void setJornada(Integer jornada) {
+		this.jornada = jornada;
+	}
+
+	
+	
+	
+
+}

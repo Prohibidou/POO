@@ -1,0 +1,16 @@
+package ej10;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+    ArrayList<Personal> personal = new ArrayList<Personal>();
+    personal.add(new Docente("nombre", 12.0 ));
+    
+	
+	Reloj reloj=new Reloj();	
+		
+	}
+
+}

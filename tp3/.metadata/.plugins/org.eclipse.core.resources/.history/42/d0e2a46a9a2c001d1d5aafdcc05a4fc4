@@ -1,0 +1,42 @@
+package ej10;
+
+public class Personal {
+protected String nombre_completo;
+protected Double antiguedad;
+protected Double cantHorasTrabMes;
+protected Double horasAsignadas;
+
+
+public Personal(String nombre_completo, Double antiguedad) {
+	super();
+	this.nombre_completo = nombre_completo;
+	this.antiguedad = antiguedad;
+}
+
+
+
+
+public String getNombre_completo() {
+	return nombre_completo;
+}
+
+public void setNombre_completo(String nombre_completo) {
+	this.nombre_completo = nombre_completo;
+}
+
+public Double getAntiguedad() {
+	return antiguedad;
+}
+
+public void setAntiguedad(float antiguedad) {
+	this.antiguedad = antiguedad;
+}
+public float getCantHorasTrabMes() {
+	return cantHorasTrabMes;
+}
+public void setCantHorasTrabMes(float cantHorasTrabMes) {
+	this.cantHorasTrabMes = cantHorasTrabMes;
+}
+	
+
+}

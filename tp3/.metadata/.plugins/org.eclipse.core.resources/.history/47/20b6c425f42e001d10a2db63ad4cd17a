@@ -1,0 +1,7 @@
+package ejercicio2_parcial;
+
+public class Persona {
+private String nombre;
+private String apellidoP;
+private Integer edad;
+}

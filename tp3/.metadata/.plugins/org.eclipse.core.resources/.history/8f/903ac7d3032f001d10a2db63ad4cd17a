@@ -1,0 +1,16 @@
+package ejercicio3_parcial;
+
+public class Heladera extends Electrodomestico {
+private Double capacidadFreezer;
+
+public Heladera() {
+        super(String modelo, Double precio, String marca, String color, Double capacidadTotal);
+	
+	
+	this.capacidadFreezer = capacidadFreezer;
+}
+
+
+
+
+}

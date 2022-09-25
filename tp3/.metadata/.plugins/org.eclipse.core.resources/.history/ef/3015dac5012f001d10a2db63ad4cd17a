@@ -1,0 +1,12 @@
+package ejercicio3_parcial;
+
+public class Electrodomestico {
+private String modelo;
+private Double precio;
+private String marca;
+private String color;
+private Double capacidad;
+	
+	
+	
+}

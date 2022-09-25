@@ -1,0 +1,15 @@
+package ej10;
+
+public class Docente extends Personal{
+private Integer categoria; 
+	public Docente(String nombre_completo, float antiguedad, float cantHorasTrabMes, float horasAsignadas) {
+		super(nombre_completo, antiguedad, cantHorasTrabMes);
+
+		
+	}
+
+	
+	
+	
+
+}

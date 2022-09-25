@@ -1,0 +1,13 @@
+package ejercicio3_parcial;
+
+public class Lavarropa extends Electrodomestico {
+private boolean esCargaFrontal;
+
+public Lavarropa(boolean esCargaFrontal) {
+	super();
+	this.esCargaFrontal = esCargaFrontal;
+}
+	
+	
+	
+}

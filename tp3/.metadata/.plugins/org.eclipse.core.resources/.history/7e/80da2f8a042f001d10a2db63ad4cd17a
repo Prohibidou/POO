@@ -1,0 +1,13 @@
+package ejercicio3_parcial;
+
+public class Cocina extends Electrodomestico {
+private boolean electrica ;
+
+public Cocina(boolean electrica) {
+	super();
+	this.electrica = electrica;
+}
+
+	
+	
+}

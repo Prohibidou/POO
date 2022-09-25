@@ -1,0 +1,28 @@
+package ej10;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Main {
+Random rnd= new Random(); 
+    public static void main(String[] args) {
+    ArrayList<Personal> personal = new ArrayList<Personal>();
+    personal.add(new Docente("nombre1", 5.0, rnd.nextInteger()));
+    personal.add(new Docente("nombre2", 4.0 ));
+    personal.add(new Docente("nombre3", 1.0 ));
+    personal.add(new Docente("nombre4", 15.0 ));
+    personal.add(new Docente("nombre5", 14.0 ));
+    personal.add(new NoDocente("nombre6", 12.0 ));
+    personal.add(new NoDocente("nombre7", 12.0 ));
+    personal.add(new NoDocente("nombre8", 12.0 ));
+    personal.add(new NoDocente("nombre9", 12.0 ));
+    personal.add(new NoDocente("nombre10", 12.0 ));
+	
+	Reloj reloj=new Reloj();	
+    reloj.setPersonal(personal);
+    
+    
+    
+	}
+
+}

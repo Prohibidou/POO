@@ -1,0 +1,8 @@
+package ej10;
+
+public class Personal {
+protected String nombre_completo;
+protected float antiguedad;
+protected float cantHorasTrabMes;
+	
+}
