@@ -1,0 +1,11 @@
+package ejercicio5;
+
+public interface TortaBuilder {
+	
+	public void paso1();
+	public void paso2();
+	public void paso3();
+	public void paso4();
+	
+	
+}

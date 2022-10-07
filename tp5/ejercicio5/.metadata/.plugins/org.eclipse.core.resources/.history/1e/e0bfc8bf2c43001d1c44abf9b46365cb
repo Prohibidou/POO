@@ -1,0 +1,26 @@
+package ejercicio5;
+
+public class TortaCoco implements TortaBuilder {
+private TortaCoco tortaCoco;
+	public void paso1() {
+		System.out.println("hago paso 1 coco");
+	}
+
+	public void paso2() {
+		System.out.println("hago paso 2 coco ");
+	}
+
+	public void paso3() {
+		System.out.println("hago paso 3 coco ");
+	}
+
+public void paso4() {
+		
+		System.out.println("hago paso 4 coco");
+	}
+
+public TortaCoco getResultado()	{
+    return this.tortaCoco;
+}
+	
+}

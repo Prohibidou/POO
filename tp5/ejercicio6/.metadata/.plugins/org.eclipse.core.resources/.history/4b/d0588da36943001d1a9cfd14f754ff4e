@@ -1,0 +1,7 @@
+package ejercicio6;
+
+public class Main {
+        
+	JuegoFactory jf = new JuegoFactory(12,123.2,832.2);
+	
+}

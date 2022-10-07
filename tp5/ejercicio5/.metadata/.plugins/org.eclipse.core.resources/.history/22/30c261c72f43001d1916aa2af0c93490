@@ -1,0 +1,11 @@
+package ejercicio5;
+
+public interface TortaBuilder {
+	
+	public TortaBuilder setPaso1();
+	public TortaBuilder setPaso2();
+	public TortaBuilder setPaso3();
+	public TortaBuilder setPaso4(String paso4) {
+	
+	
+}

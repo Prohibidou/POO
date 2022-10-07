@@ -1,0 +1,33 @@
+package ejercicio5;
+
+public class TortaVainilla implements TortaBuilder {
+	private TortaVainilla tortaVainilla;
+    private String paso4;
+	public TortaVainilla setPaso1() {
+
+		// System.out.println("hago paso 1 vainilla");
+		return this;
+	}
+
+	public TortaVainilla setPaso2() {
+
+		// System.out.println("hago paso 2 vainilla");
+		return this;
+	}
+
+	public TortaVainilla setPaso3() {
+
+		// System.out.println("hago paso 3 vainilla");
+		return this;
+	}
+
+	public TortaVainilla setPaso4(String paso4) {
+    this.paso4=paso4;
+		return this;
+	}
+
+	public TortaVainilla getResultado() {
+		return new TortaVainilla();
+	}
+
+}

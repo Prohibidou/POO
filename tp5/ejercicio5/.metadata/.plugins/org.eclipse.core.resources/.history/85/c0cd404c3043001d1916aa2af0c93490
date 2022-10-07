@@ -1,0 +1,29 @@
+package ejercicio5;
+
+public class DirectorTorta {
+
+	public void hacerTortaCoco(TortaBuilder torta) {
+      
+		torta.setPaso1();
+		torta.setPaso2();
+		torta.setPaso3();
+		torta.setPaso4("agrego chooclate arriba del coco");
+	}
+	
+	public void hacerTortaVainilla(TortaBuilder torta) {
+	      
+		torta.setPaso1();
+		torta.setPaso2();
+		torta.setPaso3();
+		torta.setPaso4("agrego leche arriba de la vainilla");
+	}
+	
+	public void hacerTortaPera(TortaBuilder torta) {
+	      
+		torta.setPaso1();
+		torta.setPaso2();
+		torta.setPaso3();
+		torta.setPaso4("agrego mas agua arriba de la pera");
+	}
+
+}

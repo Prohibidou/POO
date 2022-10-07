@@ -1,0 +1,43 @@
+package ejercicio5;
+
+public class TortaVainilla implements TortaBuilder {
+	private TortaVainilla tortaVainilla;
+    
+ 	public TortaBuilder setPaso1() {
+
+		//System.out.println("hago paso 1 vainilla");
+	}
+
+	public TortaBuilder setPaso2() {
+
+		//System.out.println("hago paso 2 vainilla");
+	}
+
+	public TortaVainilla setPaso3() {
+
+		//System.out.println("hago paso 3 vainilla");
+		return this;
+	}
+
+	public void setPaso4() {
+
+		//System.out.println("hago paso 4 vainilla");
+	}
+	
+	
+
+public TortaVainilla getResultado()	{
+               return new TortaVainilla();
+	}
+
+@Override
+public CarBuilder nbrOfDoors(int nbrOfDoors) {
+    this.nbrOfDoors = nbrOfDoors;
+    return this;
+}
+
+public Car build() {
+    return new Car(id, brand, model, color, height, engine, nbrOfDoors);
+}
+
+}

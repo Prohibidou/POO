@@ -1,0 +1,14 @@
+package ejercicio5;
+
+public class DirectorTorta {
+
+	public void hacerTorta(TortaBuilder torta) {
+		
+		torta.setPaso1();
+		torta.setPaso2();
+		torta.setPaso3();
+		torta.setPaso4();
+	}
+	
+	
+}

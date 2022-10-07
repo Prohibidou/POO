@@ -1,0 +1,45 @@
+package ejercicio6;
+
+public abstract class Juego {
+private Integer id;
+private Integer importe;
+
+
+
+public Juego(Integer id, Integer importe) {
+	super();
+	this.id = id;
+	this.importe = importe;
+}
+
+
+
+public abstract Integer getPrecio();
+
+
+
+public Integer getId() {
+	return id;
+}
+
+
+
+public void setId(Integer id) {
+	this.id = id;
+}
+
+
+
+public Integer getImporte() {
+	return importe;
+}
+
+
+
+public void setImporte(Integer importe) {
+	this.importe = importe;
+}
+
+
+
+}

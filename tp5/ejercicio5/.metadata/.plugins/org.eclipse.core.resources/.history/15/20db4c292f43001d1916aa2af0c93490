@@ -1,0 +1,31 @@
+package ejercicio5;
+
+public class TortaPera implements TortaBuilder {
+private TortaPera tortaPera;
+	
+	
+	public void setPaso1() {
+		System.out.println("hago paso 1 pera");
+	}
+
+	public void setPaso2() {
+		System.out.println("hago paso 2 pera ");
+	}
+
+	public void setPaso3() {
+		System.out.println("hago paso 3 per ");
+	}
+
+public void setPaso4() {
+		
+		System.out.println("hago paso 4 pera; agreggo pera");
+	}
+	
+
+public TortaPera getResultado()	{
+    return this.tortaPera;
+}
+
+
+
+}

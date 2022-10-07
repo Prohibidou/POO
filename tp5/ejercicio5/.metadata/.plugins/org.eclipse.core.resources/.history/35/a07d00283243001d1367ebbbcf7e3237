@@ -1,0 +1,42 @@
+package ejercicio5;
+
+public class TortaCoco extends Torta implements TortaBuilder {
+	private TortaCoco tortaCoco;
+	private String paso4;
+
+	public TortaCoco setPaso1() {
+		System.out.println("hago paso 1 coco");
+		return this;
+	}
+
+	public TortaCoco setPaso2() {
+		System.out.println("hago paso 2 coco ");
+		return this;
+	}
+
+	public TortaCoco setPaso3() {
+		System.out.println("hago paso 3 coco ");
+		return this;
+	}
+
+	public TortaCoco getResultado() {
+		return new TortaCoco();
+	}
+
+	public TortaCoco setIngrediente(String ingrediente) {
+        this.setIngrediente(ingrediente);
+		return this;
+	}
+	
+	public TortaCoco setMasa(String masa) {
+        this.setMasa(masa);
+		return this;
+	}
+
+	@Override
+	public TortaBuilder setPaso4(String paso4) {
+		this.paso4 = paso4;
+		return null;
+	}
+
+}

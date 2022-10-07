@@ -1,0 +1,37 @@
+package director;
+
+import autos.TipoAuto;
+import builder.Builder;
+import componentes.Computadora;
+import componentes.Gps;
+import componentes.Motor;
+import componentes.Transmision;
+
+public class Director {
+    
+	//los autos deportivos tienen siempre estos valores, no hace falta instanciar varias veces AutoBuilder, pues si el tipo es tipoAuto.DEPORTIVO, va a tener siempre el resto de atributos iguales en cada instancia, por eso el director setea estos todos en este metodo
+	public void buildAutoDeportivo(Builder builder) {
+		builder.setTipoAuto(TipoAuto.DEPORTIVO);
+		builder.setAsiento(2);
+		builder.setMotor(new Motor(3.0, 0));
+		builder.setTransmision(Transmision.SEMIAUTOMATICO);
+		builder.setComputadora(new Computadora());
+		builder.setGps(new Gps());
+	}
+	
+	public void buildAutoCiudad(Builder builder) {
+		builder.setTipoAuto(TipoAuto.CIUDAD);
+		builder.setAsiento(2);
+		builder.setMotor(new Motor(1.2, 0));
+		builder.setTransmision(Transmision.AUTOMATICO);
+		builder.setComputadora(new Computadora());
+		builder.setGps(new Gps());
+	}
+	public void buildSUV(Builder builder) {
+		builder.setTipoAuto(TipoAuto.SUV);
+		builder.setAsiento(4);
+		builder.setMotor(new Motor(2.5, 0));
+		builder.setTransmision(Transmision.MANUAL);
+		builder.setGps(new Gps());
+	}
+}

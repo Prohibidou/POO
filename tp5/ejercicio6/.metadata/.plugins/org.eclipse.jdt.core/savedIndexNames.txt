@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+D:\POO\tp5\ejercicio6\.metadata\.plugins\org.eclipse.jdt.core
+1565816743.index
+1067094681.index
+1865797976.index
+3206145387.index

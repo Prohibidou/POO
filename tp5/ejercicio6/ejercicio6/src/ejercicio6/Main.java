@@ -1,0 +1,18 @@
+package ejercicio6;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		JuegoFactory jf = new JuegoFactory();
+		
+		JuegoInterfaz j = jf.createNotification("fisico");	
+		
+		System.out.println(j.getPrecio());
+		System.out.println(j.toString());
+		
+		
+		
+	}
+
+}

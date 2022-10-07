@@ -1,7 +1,0 @@
-
-public class Pelicula extends Obra {
-private Double recaudacion;
-private String pais;
-	
-	
-}

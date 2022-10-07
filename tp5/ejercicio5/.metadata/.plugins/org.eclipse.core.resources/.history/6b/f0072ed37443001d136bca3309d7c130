@@ -1,0 +1,43 @@
+package ejercicio5;
+
+public class TortaBuilder implements TortaBuilder {
+
+	private String relleno;
+	private String masa;
+	private Torta torta;
+	private String paso1;
+	private String paso2;
+	private String paso3;
+	private String paso4;
+
+	public void setPaso1(String paso1) {
+		this.paso1 = paso1;
+	}
+
+	public void setPaso2(String paso2) {
+		this.paso2 = paso2;
+
+	}
+
+	public void setPaso3(String paso3) {
+		this.paso3 = paso3;
+
+	}
+
+	public void setPaso4(String paso4) {
+		this.paso4 = paso4;
+	}
+
+	public void setRelleno(String relleno) {
+		this.relleno=relleno;
+	}
+
+	public void setMasa(String masa) {
+		this.masa = masa;
+	}
+
+	public Torta getResultado() {
+		return new Torta(relleno, masa, paso1, paso2, paso3, paso4);
+	}
+
+}

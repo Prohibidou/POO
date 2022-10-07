@@ -1,0 +1,7 @@
+package ejercicio6;
+
+public interface JuegoInterfaz {
+	
+	public abstract Double getPrecio();	
+	
+}

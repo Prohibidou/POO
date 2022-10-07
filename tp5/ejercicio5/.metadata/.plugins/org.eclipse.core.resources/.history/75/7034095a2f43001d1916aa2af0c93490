@@ -1,0 +1,13 @@
+package ejercicio5;
+
+public class DirectorTorta {
+
+	public void hacerTorta(TortaBuilder torta) {
+		torta.paso1();
+		torta.paso1();
+		torta.paso1();
+		torta.paso1();
+	}
+	
+	
+}

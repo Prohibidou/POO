@@ -1,0 +1,18 @@
+package ejercicio6;
+
+public class JuegoDigital  extends Juego {
+private Double precioPlataforma;	
+
+
+	public JuegoDigital(Integer id, Integer importe, Double precioPlataforma) {
+		super(id, importe);
+		this.precioPlataforma=precioPlataforma;
+		// TODO Auto-generated constructor stub
+	}
+
+	public Integer getPrecio() {
+		return this.getImporte()*this.precioPlataforma ;
+	}
+
+
+}

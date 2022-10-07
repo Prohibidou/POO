@@ -1,7 +1,0 @@
-
-public class Obra {
-private String titulo;
-private float duracion;
-	
-	
-}

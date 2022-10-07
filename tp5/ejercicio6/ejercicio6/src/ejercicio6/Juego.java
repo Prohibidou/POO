@@ -1,0 +1,48 @@
+package ejercicio6;
+
+public abstract class Juego implements JuegoInterfaz{
+private Integer id;
+private Double importe;
+
+
+
+public Juego(Integer id, Double importe) {
+	super();
+	this.id = id;
+	this.importe = importe;
+}
+
+//public abstract Double getPrecio();	
+
+
+
+public Integer getId() {
+	return id;
+}
+
+
+
+public void setId(Integer id) {
+	this.id = id;
+}
+
+
+
+public Double getImporte() {
+	return importe;
+}
+
+
+
+public void setImporte(Double importe) {
+	this.importe = importe;
+}
+
+@Override
+public String toString() {
+	return "Juego [id=" + id + ", importe=" + importe + "]";
+}
+
+
+
+}

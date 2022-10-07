@@ -1,0 +1,24 @@
+package ejercicio6;
+
+public class JuegoFisico  extends Juego {
+	
+	
+public JuegoFisico(Integer id, Double importe) {
+		super(id, importe);
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+
+private Double precioTraslado;	
+
+
+
+
+	public Double getPrecio() {
+		return this.getImporte()*this.precioTraslado ;
+	}
+
+
+}

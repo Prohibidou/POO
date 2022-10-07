@@ -1,0 +1,22 @@
+package ejercicio6;
+
+
+public class JuegoFactory {
+	
+	//Este te decide qué notificacion creo, una por sms, por push o por e mail.Esta clase es la fabrica que crea un objeto de alguna de las otras clases.
+	 public Juego createNotification(String metodo)
+	 
+	    {
+	        if (metodo == null || metodo.isEmpty())
+	            return null;
+	        
+	        
+	        if ("Fisico".equals(metodo)) {
+	            return new JuegoDigital(12,123.0,142.2);
+	        }
+	        else if ("Digital".equals(metodo)) {
+	            return new JuegoDigital(12,123.0,142.2);
+	        }
+             return null;
+	    }
+}

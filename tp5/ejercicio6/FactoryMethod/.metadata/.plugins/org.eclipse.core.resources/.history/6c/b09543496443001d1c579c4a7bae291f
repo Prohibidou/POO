@@ -1,0 +1,12 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		NotificacionFactory nf = new NotificacionFactory();
+		Notificacion n = nf.createNotification("SMS");
+		
+		n.notificarUsuario(); // no importa qué clase notificacion haya instanciado, todas ellas son del tipo Notificacion, por eso podemos hacer n.notificarUsuario() siempre sin importar qué instanciemos
+
+	}
+
+}
